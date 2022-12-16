@@ -1,0 +1,2 @@
+require("elohim")
+print("hello")
