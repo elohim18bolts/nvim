@@ -1,3 +1,6 @@
 require("elohim.packer")
 require("elohim.remap")
-print("Hello from elohim folder")
+-- Show line numbers
+vim.cmd [[set rnu]]
+
+

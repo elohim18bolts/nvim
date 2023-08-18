@@ -1,2 +1,1 @@
 require("elohim")
-print("hello")
