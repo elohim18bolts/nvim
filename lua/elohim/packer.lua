@@ -18,6 +18,21 @@ return require('packer').startup(function(use)
 			vim.cmd('colorscheme rose-pine-moon')
 		end
 	})
+	use 'freddiehaddad/feline.nvim'
+	use{
+		'catppuccin/nvim', 
+	as = "catppuccin",
+	config = function()
+		vim.cmd('colorscheme catppuccin-macchiato')
+	end
+        }
+--	use({
+--		'rose-pine/neovim',
+--		as = 'rose-pine',
+--		config = function()
+--			vim.cmd('colorscheme rose-pine-moon')
+--		end
+--	})
 	use("neovim/nvim-lspconfig")
 	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 	use('ThePrimeagen/harpoon')
