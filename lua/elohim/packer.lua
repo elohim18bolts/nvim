@@ -51,4 +51,10 @@ return require('packer').startup(function(use)
 			'hrsh7th/vim-vsnip'
 		}
 	}
+	use {
+		"pearofducks/ansible-vim",
+		--config = function() require('ansible-vim').setup() end
+
+	}
+	use 'LnL7/vim-nix'
 end)
