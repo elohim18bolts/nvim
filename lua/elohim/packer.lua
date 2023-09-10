@@ -12,20 +12,20 @@ return require('packer').startup(function(use)
 		requires = { { 'nvim-lua/plenary.nvim' } }
 	}
 	use 'freddiehaddad/feline.nvim'
-	use{
-		'catppuccin/nvim', 
-	as = "catppuccin",
-	config = function()
-		vim.cmd('colorscheme catppuccin-macchiato')
-	end
-        }
---	use({
---		'rose-pine/neovim',
---		as = 'rose-pine',
---		config = function()
---			vim.cmd('colorscheme rose-pine-moon')
---		end
---	})
+	use {
+		'catppuccin/nvim',
+		as = "catppuccin",
+		config = function()
+			vim.cmd('colorscheme catppuccin-macchiato')
+		end
+	}
+	--	use({
+	--		'rose-pine/neovim',
+	--		as = 'rose-pine',
+	--		config = function()
+	--			vim.cmd('colorscheme rose-pine-moon')
+	--		end
+	--	})
 	use("neovim/nvim-lspconfig")
 	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 	use('ThePrimeagen/harpoon')
@@ -57,4 +57,12 @@ return require('packer').startup(function(use)
 
 	}
 	use 'LnL7/vim-nix'
+	use {
+		'nvim-tree/nvim-tree.lua',
+		requires = { { 'nvim-tree/nvim-web-devicons' } },
+		config = function()
+			vim.opt.termguicolors = true
+		end
+
+	}
 end)
